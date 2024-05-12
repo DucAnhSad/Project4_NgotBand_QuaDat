@@ -1,0 +1,67 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:project4_ngotband_quadat/common/styles/shadows.dart';
+import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:project4_ngotband_quadat/common/widgets/icons/circular_icon.dart';
+import 'package:project4_ngotband_quadat/common/widgets/images/rounded_image.dart';
+import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
+import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
+import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
+import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
+
+class MyProductCardVertical extends StatelessWidget {
+  const MyProductCardVertical({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = MyHelperFunctions.isDarkMode(context);
+
+    /// Container with side padding, color, edges, radius and shadow
+    return Container(
+      width: 180,
+      padding: const EdgeInsets.all(1),
+      decoration: BoxDecoration(
+        boxShadow: [MyShadowStyle.verticalProductShadow],
+        borderRadius: BorderRadius.circular(MySizes.productImageRadius),
+        color: dark ? MyColors.darkGrey : MyColors.white
+      ),
+      child: Column(
+        children: [
+          /// Thumbnail, wishlish button, discount tag
+          MyRoundedContainer(
+            height: 180,
+            padding: const EdgeInsets.all(MySizes.sm),
+            backgroundColor: dark? MyColors.dark : MyColors.light,
+            child: Stack(
+              children: [
+                const MyRoundedImage(imageUrl: MyImages.book1),
+
+                /// Sale tag
+                Positioned(
+                  top: 12,
+                  child: MyRoundedContainer(
+                    radius: MySizes.sm,
+                    backgroundColor: MyColors.secondary.withOpacity(0.8),
+                    padding: const EdgeInsets.symmetric(horizontal: MySizes.sm, vertical: MySizes.xs),
+                    child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: MyColors.black),),
+                  ),
+                ),
+                /// Favorite button
+                const Positioned(
+                    top: 0,
+                    right: 0,
+                    child: MyCircularIcon(icon: Iconsax.heart, color: Colors.red,))
+              ],
+            ),
+          )
+
+          /// Detail
+
+
+        ],
+      ),
+    );
+  }
+}
+

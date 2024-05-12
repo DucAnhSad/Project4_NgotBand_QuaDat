@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/image_text_widgets/vertical_image_text.dart';
+import 'package:project4_ngotband_quadat/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/widgets/promo_slider.dart';
@@ -64,8 +65,16 @@ class HomeScreen extends StatelessWidget {
             /// Body
             Padding(
               padding: EdgeInsets.all(MySizes.defaultSpace),
-              child: MyPromoSlider(banners: [MyImages.detectiveBanner, MyImages.businessBanner, MyImages.booksDay, MyImages.psychologyBanner],)
-            )
+              /// Promo Slider
+              child: Column(
+                children: [
+                  MyPromoSlider(banners: [MyImages.detectiveBanner, MyImages.businessBanner, MyImages.booksDay, MyImages.psychologyBanner],),
+                  SizedBox(height: MySizes.spaceBtwSections,),
+                  /// Popular products
+                  MyProductCardVertical(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
