@@ -1,6 +1,4 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:project4_ngotband_quadat/common/styles/shadows.dart';
@@ -13,6 +11,8 @@ import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
 import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
+
+import '../../texts/brand_title_text_with_verified_icon.dart';
 
 class MyProductCardVertical extends StatelessWidget {
   const MyProductCardVertical({super.key});
@@ -64,50 +64,45 @@ class MyProductCardVertical extends StatelessWidget {
             const SizedBox(height: MySizes.spaceBtwItems / 2,),
 
             /// Detail
-            Padding(
+            const Padding(
                 padding: EdgeInsets.only(left: MySizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MyProductTitleText(title: 'Book 1', smallSize: true,),
                   SizedBox(height: MySizes.spaceBtwItems / 2,),
-                  Row(
-                    children: [
-                      Text('Business', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium,),
-                      const SizedBox(width: MySizes.xs,),
-                      const Icon(Iconsax.verify, color: MyColors.primary, size: MySizes.iconXs,),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Price
-                      const MyProductPriceText(price: '1.200'),
-
-                      /// Add to Cart button
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: MyColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(MySizes.cardRadiusMd),
-                            bottomRight: Radius.circular(MySizes.productImageRadius),
-                          )
-                        ),
-                        child: const SizedBox(
-                          width: MySizes.iconLg *1.2,
-                            height: MySizes.iconLg *1.2,
-                            child: Center(
-                              child: Icon(Icons.add, color: MyColors.white,
-                              ),
-                            )
-                        ),
-                      )
-                    ],
-                  )
+                  BrandTitleTextWithVerifiedIcon(title: 'Business', iconColor: MyColors.primary,),
                 ],
               ),
             ),
+            const Spacer(),
+            /// Price row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Price
+                const MyProductPriceText(price: '1.200'),
 
+                /// Add to Cart button
+                Container(
+                  decoration: const BoxDecoration(
+                      color: MyColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(MySizes.cardRadiusMd),
+                        bottomRight: Radius.circular(MySizes.productImageRadius),
+                      )
+                  ),
+                  child: const SizedBox(
+                      width: MySizes.iconLg *1.2,
+                      height: MySizes.iconLg *1.2,
+                      child: Center(
+                        child: Icon(Icons.add, color: MyColors.white,
+                        ),
+                      )
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
