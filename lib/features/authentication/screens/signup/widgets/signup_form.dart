@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:project4_ngotband_quadat/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
-import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/constants/text_strings.dart';
-import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
 
 class MySignUpForm extends StatelessWidget {
   const MySignUpForm({

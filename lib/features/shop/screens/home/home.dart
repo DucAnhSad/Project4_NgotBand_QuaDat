@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   /// Appbar
                   MyHomeAppBar(),
                   SizedBox(
-                    height: MySizes.spaceBtwSections,
+                    height: MySizes.spaceBtwItems,
                   ),
 
                   /// Searchbar
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                     text: 'Search',
                   ),
                   SizedBox(
-                    height: MySizes.spaceBtwSections,
+                    height: MySizes.spaceBtwItems,
                   ),
 
                   /// Category
@@ -58,7 +58,9 @@ class HomeScreen extends StatelessWidget {
                         MyHomeCategories(),
                       ],
                     ),
-                  )
+                  ),
+
+                  SizedBox(height: MySizes.spaceBtwSections,)
                 ],
               ),
             ),
@@ -76,6 +78,8 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            const SizedBox(height: MySizes.spaceBtwSections,),
           ],
         ),
       ),

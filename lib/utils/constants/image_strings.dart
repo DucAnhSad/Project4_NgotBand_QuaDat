@@ -35,4 +35,9 @@ class MyImages{
   static const String book8 = "assets/images/products/book8.jpg";
   static const String book9 = "assets/images/products/book9.png";
   static const String book10 = "assets/images/products/book10.png";
+
+  // User
+  static const String user1 = "assets/images/user/user1.jpg";
+  static const String user2 = "assets/images/user/user2.jpg";
+  static const String user3 = "assets/images/user/user3.jpg";
 }

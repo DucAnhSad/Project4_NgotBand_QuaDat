@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:project4_ngotband_quadat/features/personalization/screens/settings/settings.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/home.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/store/store.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/wishlist/wishlist.dart';
 import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
 import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
 
@@ -24,11 +26,11 @@ class NavigationMenu extends StatelessWidget {
           backgroundColor: dark ? MyColors.black : MyColors.white,
           indicatorColor: dark ? MyColors.white.withOpacity(0.1) : MyColors.dark.withOpacity(0.1),
 
-          destinations: [
-            const NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-            const NavigationDestination(icon: Icon(Icons.shop), label: 'Store'),
-            const NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist'),
-            const NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          destinations: const [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.shop), label: 'Store'),
+            NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
           ],
         ),
       ),
@@ -40,5 +42,5 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
 
-  final screen = [ const HomeScreen(), const StoreScreen(), Container(color: Colors.orange,), Container(color: Colors.blue,),];
+  final screen = [ const HomeScreen(), const StoreScreen(), const FavoriteScreen(), const SettingsScreen(),];
 }

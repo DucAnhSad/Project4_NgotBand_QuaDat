@@ -20,7 +20,7 @@ class MyLoginForm extends StatelessWidget {
           children: [
             /// Email
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.direct_right),
                   labelText: MyText.email),
             ),
@@ -28,7 +28,7 @@ class MyLoginForm extends StatelessWidget {
 
             /// Password
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.password_check),
                   labelText: MyText.password, suffixIcon: Icon(Iconsax.eye_slash)),
             ),
@@ -55,12 +55,12 @@ class MyLoginForm extends StatelessWidget {
             /// Sign In Button
             SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: () => Get.to(() => const NavigationMenu()), child: Text(MyText.signIn))),
+                child: ElevatedButton(onPressed: () => Get.to(() => const NavigationMenu()), child: const Text(MyText.signIn))),
             const SizedBox(height: MySizes.spaceBtwItems),
             /// Create Account Button
             SizedBox(
                 width: double.infinity,
-                child: OutlinedButton(onPressed: () => Get.to(() => const SignUpScreen()), child: Text(MyText.createAccount))),
+                child: OutlinedButton(onPressed: () => Get.to(() => const SignUpScreen()), child: const Text(MyText.createAccount))),
           ],
         ),
       ),

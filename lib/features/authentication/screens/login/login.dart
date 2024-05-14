@@ -27,14 +27,14 @@ class LoginScreen extends StatelessWidget {
               MyLoginHeader(dark: dark),
 
               /// Form
-              MyLoginForm(),
+              const MyLoginForm(),
 
               /// Divider
               MyFormDivider(dividerText: MyText.orSignInWith.capitalize!),
               const SizedBox(height: MySizes.spaceBtwSections,),
 
               /// Footer
-              MySocialButtons(),
+              const MySocialButtons(),
 
             ],
           ),

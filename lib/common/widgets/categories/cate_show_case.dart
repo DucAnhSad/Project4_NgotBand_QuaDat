@@ -25,7 +25,7 @@ class CategoryShowcase extends StatelessWidget {
       child: Column(
         children: [
           /// Cate with Products count
-          const CategoryCard(showBorder: false, image: MyImages.detective, title: 'Kid', productsCount: '56'),
+          const CategoryCard(showBorder: false, image: MyImages.kid, title: 'Kid', productsCount: '56'),
           const SizedBox(height: MySizes.spaceBtwItems,),
 
           /// Cate top 3

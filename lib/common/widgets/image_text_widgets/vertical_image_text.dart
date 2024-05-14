@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
-import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
 
@@ -10,7 +9,7 @@ class VerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = MyColors.white,
-    this.backGroundColor = MyColors.white,
+    this.backGroundColor,
     this.onTap,
   });
 

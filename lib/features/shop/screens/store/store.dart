@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project4_ngotband_quadat/common/widgets/appbar/appbar.dart';
 import 'package:project4_ngotband_quadat/common/widgets/appbar/tabbar.dart';
-import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/layouts/grid_layout.dart';
 import 'package:project4_ngotband_quadat/common/widgets/products/cart/cart_menu_icon.dart';
@@ -14,7 +12,6 @@ import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
 
-import '../../../../common/widgets/categories/cate_show_case.dart';
 
 
 class StoreScreen extends StatelessWidget {
@@ -62,7 +59,7 @@ class StoreScreen extends StatelessWidget {
                         itemBuilder: (_, index){
                       return const CategoryCard(
                         showBorder: false,
-                        image: MyImages.detective,
+                        image: MyImages.horror,
                         title: 'Horror',
                         productsCount: '103',);
                     })

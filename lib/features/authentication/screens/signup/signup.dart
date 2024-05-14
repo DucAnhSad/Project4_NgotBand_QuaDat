@@ -3,10 +3,8 @@ import 'package:get/get.dart';
 import 'package:project4_ngotband_quadat/common/widgets/login_signup/form_divider.dart';
 import 'package:project4_ngotband_quadat/common/widgets/login_signup/social_buttons.dart';
 import 'package:project4_ngotband_quadat/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/constants/text_strings.dart';
-import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

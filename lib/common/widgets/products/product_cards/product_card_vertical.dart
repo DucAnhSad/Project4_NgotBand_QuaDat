@@ -41,6 +41,7 @@ class MyProductCardVertical extends StatelessWidget {
               backgroundColor: dark? MyColors.dark : MyColors.light,
               child: Stack(
                 children: [
+                  /// Thumbnail image
                   const MyRoundedImage(imageUrl: MyImages.book1),
 
                   /// Sale tag
@@ -53,7 +54,7 @@ class MyProductCardVertical extends StatelessWidget {
                       child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: MyColors.black),),
                     ),
                   ),
-                  /// Favorite button
+                  /// Favorite Icon button
                   const Positioned(
                       top: 0,
                       right: 0,
@@ -63,7 +64,7 @@ class MyProductCardVertical extends StatelessWidget {
             ),
             const SizedBox(height: MySizes.spaceBtwItems / 2,),
 
-            /// Detail
+            /// Details
             const Padding(
                 padding: EdgeInsets.only(left: MySizes.sm),
               child: Column(
@@ -81,7 +82,10 @@ class MyProductCardVertical extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 /// Price
-                const MyProductPriceText(price: '1.200'),
+                const Padding(
+                  padding: EdgeInsets.only(left: MySizes.sm),
+                  child: MyProductPriceText(price: '1.200'),
+                ),
 
                 /// Add to Cart button
                 Container(

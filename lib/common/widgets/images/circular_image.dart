@@ -36,7 +36,7 @@ class MyCircularImage extends StatelessWidget {
       ),
       child: Image(
         fit: fit,
-        image: isNetworkImage? NetworkImage(image) : const AssetImage(MyImages.horror) as ImageProvider,
+        image: isNetworkImage? NetworkImage(image) : AssetImage(image) as ImageProvider,
         color: overlayColor,
       ),
     );
