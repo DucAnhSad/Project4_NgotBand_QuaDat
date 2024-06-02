@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:project4_ngotband_quadat/common/widgets/appbar/appbar.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -7,6 +8,7 @@ import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.da
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
+import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -21,11 +23,12 @@ class SettingsScreen extends StatelessWidget {
             MyPrimaryHeaderContainer(
               child: Column(
                 children: [
+                  /// AppBar
                   MyAppBar(title: Text('Account', style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white),),),
                   const SizedBox(height: MySizes.spaceBtwSections,),
 
                   /// User Profile Card
-                  const MyUserProfileTile(),
+                  MyUserProfileTile(onPressed:() => Get.to(() => const ProfileScreen())),
                   const SizedBox(height: MySizes.spaceBtwSections,),
                 ],
               ),

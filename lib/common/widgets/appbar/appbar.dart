@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/device/device_utility.dart';
 
@@ -27,7 +26,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
       child: AppBar(
         automaticallyImplyLeading: false,
         leading: showBackArrow
-            ? IconButton(onPressed: () => Get.back(), icon: const Icon(Iconsax.arrow_left))
+            ? IconButton(onPressed: () => Get.back(), icon: const Icon(Icons.arrow_back_ios))
             : leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) : null,
         title: title,
         actions: actions,

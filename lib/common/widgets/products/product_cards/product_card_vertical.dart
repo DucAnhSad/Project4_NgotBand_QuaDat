@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:project4_ngotband_quadat/common/styles/shadows.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/rounded_container.dart';
@@ -12,6 +13,7 @@ import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 import 'package:project4_ngotband_quadat/utils/helpers/helper_functions.dart';
 
+import '../../../../features/shop/screens/product_details/product_detail.dart';
 import '../../texts/brand_title_text_with_verified_icon.dart';
 
 class MyProductCardVertical extends StatelessWidget {
@@ -23,7 +25,7 @@ class MyProductCardVertical extends StatelessWidget {
 
     /// Container with side padding, color, edges, radius and shadow
     return GestureDetector(
-      onTap: (){},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

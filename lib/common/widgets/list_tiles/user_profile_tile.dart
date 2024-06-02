@@ -5,8 +5,10 @@ import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
 
 class MyUserProfileTile extends StatelessWidget {
   const MyUserProfileTile({
-    super.key,
+    super.key, required this.onPressed,
   });
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class MyUserProfileTile extends StatelessWidget {
       ),
       title: Text('Zhao Li Ying', style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),
       subtitle: Text('zhaoliying@user.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white),),
-      trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.edit, color: MyColors.white,), ),
+      trailing: IconButton(onPressed: onPressed, icon: const Icon(Icons.edit, color: MyColors.white,), ),
     );
   }
 }
