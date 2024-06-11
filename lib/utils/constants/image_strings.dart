@@ -40,4 +40,12 @@ class MyImages{
   static const String user1 = "assets/images/user/user1.jpg";
   static const String user2 = "assets/images/user/user2.jpg";
   static const String user3 = "assets/images/user/user3.jpg";
+
+  // Product Reviews
+  static const String userProfileImage1 = "assets/images/reviews/review_profile_image_1.jpg";
+  static const String userProfileImage2 = "assets/images/reviews/review_profile_image_2.jpg";
+  static const String userProfileImage3 = "assets/images/reviews/review_profile_image_3.jpg";
+  static const String userProfileImage4 = "assets/images/reviews/review_profile_image_4.jpg";
+  static const String userProfileImage5 = "assets/images/reviews/review_profile_image_5.jpg";
+  static const String userProfileImage6 = "assets/images/reviews/review_profile_image_6.jpg";
 }

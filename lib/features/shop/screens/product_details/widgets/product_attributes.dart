@@ -33,7 +33,7 @@ class MyProductAttributes extends StatelessWidget {
                     children: [
                       const Row(
                         children: [
-                          MyProductTitleText(title: 'Price', smallSize: true,),
+                          MyProductTitleText(title: 'Price :', smallSize: true,),
 
                           /// Actual Price
                           MyProductPriceText(price: '1000', lineThrough: true,),
@@ -61,7 +61,7 @@ class MyProductAttributes extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: MySizes.spaceBtwItems,),
+        const SizedBox(width: MySizes.spaceBtwSections,),
 
         /// Attributes
         Column(
@@ -83,7 +83,7 @@ class MyProductAttributes extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const MySectionHeading(title: 'Size'),
+            const MySectionHeading(title: 'Size', showActionButton: false,),
             const SizedBox(height: MySizes.spaceBtwItems / 2,),
             Wrap(
               spacing: 8,
