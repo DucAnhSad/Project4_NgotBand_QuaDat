@@ -5,6 +5,7 @@ import 'package:project4_ngotband_quadat/common/widgets/appbar/appbar.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.dart';
+import 'package:project4_ngotband_quadat/features/personalization/screens/address/address.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -42,7 +43,9 @@ class SettingsScreen extends StatelessWidget {
                   const MySectionHeading(title: 'Account Settings', showActionButton: false,),
                   const SizedBox(height: MySizes.spaceBtwItems,),
 
-                  const MySettingsMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address',),
+                  MySettingsMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address',
+                  onTap: () => Get.to(() => const UserAddressScreen()),),
+
                   const MySettingsMenuTile(icon: Icons.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout',),
                   const MySettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Order', subTitle: 'In-progress and Completed Orders',),
                   const MySettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account',),
