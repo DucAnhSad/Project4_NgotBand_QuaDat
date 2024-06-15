@@ -48,4 +48,13 @@ class MyImages{
   static const String userProfileImage4 = "assets/images/reviews/review_profile_image_4.jpg";
   static const String userProfileImage5 = "assets/images/reviews/review_profile_image_5.jpg";
   static const String userProfileImage6 = "assets/images/reviews/review_profile_image_6.jpg";
+
+  // Payment Method
+  static const String applePay = "assets/icons/payment_methods/icons8-apple-pay-50.png";
+  static const String creditCard = "assets/icons/payment_methods/icons8-credit-card-48.png";
+  static const String googlePay = "assets/icons/payment_methods/icons8-google-pay-48.png";
+  static const String masterCard = "assets/icons/payment_methods/icons8-mastercard-48.png";
+  static const String paypal = "assets/icons/payment_methods/icons8-paypal-48.png";
+  static const String visa = "assets/icons/payment_methods/icons8-visa-48.png";
+  static const String successPayment = "assets/icons/payment_methods/icons8-success-50.png";
 }

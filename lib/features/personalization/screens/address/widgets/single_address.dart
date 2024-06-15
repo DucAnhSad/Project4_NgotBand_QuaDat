@@ -47,7 +47,7 @@ class MySingleAddress extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: MySizes.sm / 2,),
-              const Text('19 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội, Việt Nam', softWrap: true,)
+              const Text('19 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội, VN', softWrap: true,),
             ],
           )
         ],

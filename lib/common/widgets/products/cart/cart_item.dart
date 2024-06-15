@@ -18,8 +18,8 @@ class MyCartItem extends StatelessWidget {
       children: [
         const MyRoundedImage(
           imageUrl: MyImages.book6,
-          width: 60,
-          height: 60,
+          width: 90,
+          height: 90,
           padding: EdgeInsets.all(MySizes.sm),
         ),
         const SizedBox(height: MySizes.spaceBtwSections,),
@@ -31,7 +31,7 @@ class MyCartItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const BrandTitleTextWithVerifiedIcon(title: 'Detective'),
-              const Flexible(child: MyProductTitleText(title: 'Nice Detective Book everyone will like it and so am I', maxLines: 1,)),
+              const Flexible(child: MyProductTitleText(title: 'Nice Detective Book everyone will like it and so am I',)),
               /// Attributes
               Text.rich(
                 TextSpan(
