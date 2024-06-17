@@ -6,6 +6,8 @@ import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers
 import 'package:project4_ngotband_quadat/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.dart';
 import 'package:project4_ngotband_quadat/features/personalization/screens/address/address.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/cart/cart.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/order/order.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -46,8 +48,11 @@ class SettingsScreen extends StatelessWidget {
                   MySettingsMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address',
                   onTap: () => Get.to(() => const UserAddressScreen()),),
 
-                  const MySettingsMenuTile(icon: Icons.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout',),
-                  const MySettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Order', subTitle: 'In-progress and Completed Orders',),
+                  MySettingsMenuTile(icon: Icons.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout',
+                  onTap: () => Get.to(() => const CartScreen()),),
+
+                  MySettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Order', subTitle: 'In-progress and Completed Orders',
+                  onTap: () => Get.to(() => const OrderScreen()),),
                   const MySettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account',),
                   const MySettingsMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted coupons',),
                   const MySettingsMenuTile(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Set any kind of notification message',),
