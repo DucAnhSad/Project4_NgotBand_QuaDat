@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/image_text_widgets/vertical_image_text.dart';
@@ -8,6 +9,7 @@ import 'package:project4_ngotband_quadat/common/widgets/products/product_cards/p
 import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
 import 'package:project4_ngotband_quadat/utils/constants/image_strings.dart';
 import 'package:project4_ngotband_quadat/utils/constants/sizes.dart';
@@ -102,7 +104,7 @@ class MyHomeCategories extends StatelessWidget {
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return VerticalImageText(image: MyImages.detective, title: 'Detective', onTap: (){},);
+          return VerticalImageText(image: MyImages.detective, title: 'Detective', onTap: () => Get.to(() => const SubCategoriesScreen()),);
         },
       ),
     );
