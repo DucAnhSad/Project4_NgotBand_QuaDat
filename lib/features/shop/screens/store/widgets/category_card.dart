@@ -13,7 +13,7 @@ class CategoryCard extends StatelessWidget {
     this.isNetworkImage = false,
     required this.image,
     required this.title,
-    required this.productsCount,
+    required this.productsCount, this.onTap,
   });
 
   final bool showBorder;
@@ -21,11 +21,12 @@ class CategoryCard extends StatelessWidget {
   final bool isNetworkImage;
   final String image;
   final String title, productsCount;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: onTap,
       child: MyRoundedContainer(
         padding: const EdgeInsets.all(MySizes.sm),
         showBorder: showBorder,

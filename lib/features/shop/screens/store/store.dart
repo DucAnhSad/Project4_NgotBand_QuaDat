@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:project4_ngotband_quadat/common/widgets/appbar/appbar.dart';
 import 'package:project4_ngotband_quadat/common/widgets/appbar/tabbar.dart';
 import 'package:project4_ngotband_quadat/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:project4_ngotband_quadat/common/widgets/layouts/grid_layout.dart';
 import 'package:project4_ngotband_quadat/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/brand/all_brands.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/brand/brand_products.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/store/widgets/category_card.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:project4_ngotband_quadat/utils/constants/colors.dart';
@@ -49,7 +52,7 @@ class StoreScreen extends StatelessWidget {
                     const SizedBox(height: MySizes.spaceBtwSections,),
       
                     /// Featured categories
-                    MySectionHeading(title: 'Featured Categories', onPressed: (){},),
+                    MySectionHeading(title: 'Featured Categories', onPressed: () => Get.to(() => const AllBrandsScreen()),),
                     const SizedBox(height: MySizes.spaceBtwItems / 1.5,),
       
                     /// Categories Grid
@@ -57,11 +60,13 @@ class StoreScreen extends StatelessWidget {
                         itemCount: 4,
                         mainAxisExtent: 80,
                         itemBuilder: (_, index){
-                      return const CategoryCard(
+                      return CategoryCard(
                         showBorder: false,
                         image: MyImages.horror,
                         title: 'Horror',
-                        productsCount: '103',);
+                        productsCount: '103',
+                        onTap: () => Get.to(() => const BrandProducts()),
+                      );
                     })
                   ],
                 ),

@@ -7,6 +7,7 @@ import 'package:project4_ngotband_quadat/common/widgets/image_text_widgets/verti
 import 'package:project4_ngotband_quadat/common/widgets/layouts/grid_layout.dart';
 import 'package:project4_ngotband_quadat/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:project4_ngotband_quadat/common/widgets/texts/section_heading.dart';
+import 'package:project4_ngotband_quadat/features/shop/screens/all_products/all_products.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:project4_ngotband_quadat/features/shop/screens/sub_category/sub_categories.dart';
@@ -75,6 +76,11 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   const MyPromoSlider(banners: [MyImages.detectiveBanner, MyImages.businessBanner, MyImages.booksDay, MyImages.psychologyBanner],),
                   const SizedBox(height: MySizes.spaceBtwSections,),
+
+                  /// Heading
+                  MySectionHeading(title: 'Popular Books', onPressed: () => Get.to(() => const AllProducts()),),
+                  const SizedBox(height: MySizes.spaceBtwSections,),
+
                   /// Popular products
                   MyGridLayout(itemCount: 6, itemBuilder: (_, index) => const MyProductCardVertical()),
                 ],
